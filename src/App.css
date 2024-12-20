@@ -22,6 +22,62 @@
   color: white;
 }
 
+.section-title {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 26px;
+  color: rgba(52, 60, 106, 1); 
+}
+
+.see-all-button {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20px;
+  color: rgba(52, 60, 106, 1); 
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.see-all-button:hover {
+  text-decoration: underline;
+}
+
+.card-border-radius {
+  border-radius: 25px;
+}
+
+/* Global Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+  height: 8px; /* Height for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Background of the track */
+  border-radius: 4px; /* Rounded track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* Scrollbar thumb color */
+  border-radius: 4px; /* Rounded thumb */
+  border: 2px solid transparent; /* Padding for better visibility */
+  background-clip: content-box; /* Prevent thumb color from bleeding */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
+
+.scrollbar-hidden {
+  scrollbar-width: none; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari, and Opera */
+}
+
 body {
   @apply font-inter text-gray-800; /* Inter font and default text color */
 }

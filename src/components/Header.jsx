@@ -11,8 +11,9 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
         >
           <span className="material-icons">{isSidebarOpen ? "" : "menu"}</span>
         </button>
+        <h2 className="hidden md:block text-xl font-medium text-secondary">Overview</h2>
       </div>
-      <h2 className="text-xl font-medium text-secondary">Overview</h2>
+      <h2 className="block md:hidden text-xl font-medium text-secondary">Overview</h2>
 
       {/* Right Section */}
       <div className="flex items-center space-x-6">
@@ -29,10 +30,10 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
         {/* Icon Buttons */}
         <div className="relative hidden md:flex space-x-4">
           <div className="bg-iconBackground w-10 h-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer">
-            <span className="material-icons text-primary">settings</span>
+            <img src="icons/settings-top.png" alt="Logo" className="w-5 h-5" />
           </div>
           <div className="bg-iconBackground w-10 h-10 flex items-center justify-center rounded-full shadow-sm cursor-pointer">
-            <span className="material-icons text-primary">notifications</span>
+          <img src="icons/notification-top.png" alt="Logo" className="w-5 h-5" />
           </div>
         </div>
 

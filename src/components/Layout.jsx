@@ -15,7 +15,7 @@ const Layout = () => {
       {/* Sidebar */}
       <Sidebar isSidebarOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col md:ml-64">
         {/* Header */}
         <Header toggleSidebar={toggleSidebar} isSidebarOpen={isSidebarOpen} />
         {/* Main Content */}

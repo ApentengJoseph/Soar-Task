@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
@@ -22,15 +22,15 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   }, [isSidebarOpen, toggleSidebar]);
 
   const navItems = [
-    { name: "Dashboard", path: "/", icon: "home" },
-    { name: "Transactions", path: "", icon: "attach_money" },
-    { name: "Accounts", path: "", icon: "person" },
-    { name: "Investments", path: "", icon: "bar_chart" },
-    { name: "Credit Cards", path: "", icon: "credit_card" },
-    { name: "Loans", path: "", icon: "monetization_on" },
-    { name: "Services", path: "", icon: "build" },
-    { name: "My Privileges", path: "", icon: "star" },
-    { name: "Setting", path: "/settings", icon: "settings" },
+    { name: "Dashboard", path: "/", icon: "icons/home.png" },
+    { name: "Transactions", path: "", icon: "icons/transaction.png" },
+    { name: "Accounts", path: "", icon: "icons/account.png" },
+    { name: "Investments", path: "", icon: "icons/investment.png" },
+    { name: "Credit Cards", path: "", icon: "icons/credit-card.png" },
+    { name: "Loans", path: "", icon: "icons/loan.png" },
+    { name: "Services", path: "", icon: "icons/service.png" },
+    { name: "My Privileges", path: "", icon: "icons/privilege.png" },
+    { name: "Setting", path: "/settings", icon: "icons/settings-solid.png" },
   ];
 
   return (
@@ -66,13 +66,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                     : "text-gray-500 hover:text-darkText"
                 }`}
               >
-                <span
-                  className={`material-icons ${
-                    isActive ? "text-darkText-important" : "text-gray-400"
-                  }`}
-                >
-                  {item.icon}
-                </span>
+              <img className={`w-5 h-5 ${isActive ? "text-darkText-important" : "text-gray-400"}`} src={item.icon} alt="Logo"/>
                 <Link to={item.path} className="flex-1">
                   {item.name}
                 </Link>
