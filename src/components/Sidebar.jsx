@@ -60,13 +60,21 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
             return (
               <li
                 key={item.name}
+                onClick={toggleSidebar}
                 className={`flex items-center space-x-3 px-4 py-2 rounded ${
                   isActive
                     ? "text-darkText border-l-4 border-darkText"
                     : "text-gray-500 hover:text-darkText"
                 }`}
               >
-              <img className={`w-5 h-5 ${isActive ? "text-darkText-important" : "text-gray-400"}`} src={item.icon} alt="Logo"/>
+                <img
+                  style={{
+                    backgroundColor: isActive ? "#232323" : "text-gray-400",
+                  }}
+                  className="w-5 h-5"
+                  src={item.icon}
+                  alt="Logo"
+                />
                 <Link to={item.path} className="flex-1">
                   {item.name}
                 </Link>

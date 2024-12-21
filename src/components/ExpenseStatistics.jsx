@@ -16,7 +16,7 @@ const ExpenseStatistics = () => {
     >
       <div className="flex flex-col items-center">
         {/* Chart Container */}
-        <div style={{ width: "100%", maxWidth: "450px", marginLeft: "2.5rem" }}>
+        <div style={{ width: "100%", maxWidth: "450px", marginLeft: "3rem" }}>
           <PieChart
             series={[
               {
@@ -27,7 +27,7 @@ const ExpenseStatistics = () => {
                 })),
                 highlightScope: { fade: 'global', highlight: 'item' },
                 faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-                outerRadius: 160,
+                outerRadius: 155,
                 innerRadius:10,
                 paddingAngle: 10,
                 cornerRadius: 5,

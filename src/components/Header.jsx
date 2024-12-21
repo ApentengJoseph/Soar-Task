@@ -1,6 +1,8 @@
 import React from "react";
+import { useProfile } from "../pages/ProfileContext"; 
 
 const Header = ({ toggleSidebar, isSidebarOpen }) => {
+  const { profile } = useProfile(); //  profile state
   return (
     <header className="bg-white p-4 flex flex-wrap justify-between items-center shadow-md">
       {/* Left Section */}
@@ -40,7 +42,7 @@ const Header = ({ toggleSidebar, isSidebarOpen }) => {
         {/* Profile Image */}
         <div className="w-10 h-10 rounded-full overflow-hidden">
           <img
-            src="https://randomuser.me/api/portraits/men/61.jpg"
+            src={profile.profilePicture}
             alt="Profile"
             className="w-full h-full object-cover"
           />
