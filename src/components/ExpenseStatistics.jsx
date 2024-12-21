@@ -27,7 +27,7 @@ const ExpenseStatistics = () => {
                 })),
                 highlightScope: { fade: 'global', highlight: 'item' },
                 faded: { innerRadius: 30, additionalRadius: -30, color: 'gray' },
-                outerRadius: 155,
+                outerRadius: 150,
                 innerRadius:10,
                 paddingAngle: 10,
                 cornerRadius: 5,

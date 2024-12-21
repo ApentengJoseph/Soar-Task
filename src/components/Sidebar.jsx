@@ -30,7 +30,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
     { name: "Loans", path: "", icon: "icons/loan.png" },
     { name: "Services", path: "", icon: "icons/service.png" },
     { name: "My Privileges", path: "", icon: "icons/privilege.png" },
-    { name: "Setting", path: "/settings", icon: "icons/settings-solid.png" },
+    { name: "Settings", path: "/settings", icon: "icons/settings.png" },
   ];
 
   return (
@@ -69,7 +69,9 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
               >
                 <img
                   style={{
-                    backgroundColor: isActive ? "#232323" : "text-gray-400",
+                    filter: isActive
+                      ? "invert(0) sepia(1) saturate(5) hue-rotate(190deg)"
+                      : "invert(40%)",
                   }}
                   className="w-5 h-5"
                   src={item.icon}

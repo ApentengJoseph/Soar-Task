@@ -4,6 +4,7 @@ import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 const QuickTransfer = ({ contacts }) => {
   const containerRef = useRef(null);
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [amount, setAmount] = useState("525.50"); 
 
   const handleNext = () => {
     if (containerRef.current) {
@@ -115,7 +116,8 @@ const QuickTransfer = ({ contacts }) => {
         <div className="relative flex items-center w-full sm:w-auto">
           <input
             type="text"
-            value="525.50"
+            value={amount} // Controlled by state
+            onChange={(e) => setAmount(e.target.value)} // Updates state
             className="w-full sm:w-[70%] px-4 sm:px-6 py-2 sm:py-3 bg-[#EDF1F7] rounded-full text-textBlueLight font-medium sm:font-semibold text-sm sm:text-lg placeholder-[#A0AEC0] border border-transparent focus:outline-none focus:ring-2 focus:ring-[#D9E4FF]"
           />
 

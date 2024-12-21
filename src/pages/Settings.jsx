@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useProfile } from "./ProfileContext";
+import { useProfile } from "../contexts/ProfileContext";
 
 const Settings = () => {
   const { profile, updateProfile } = useProfile();
@@ -66,7 +66,7 @@ const Settings = () => {
     <div className="p-6 w-[95%] card-border-radius mx-auto bg-white">
       {/* Tabs */}
       <div className="flex justify-start border-[#F4F5F7] border-b mb-6">
-        <button className="pb-2 px-4 border-darkText rounded-tl-lg rounded-tl-md text-darkText border-b-4 font-medium text-sm sm:text-base">
+        <button className="pb-2 px-4 border-darkText rounded text-darkText border-b-4 font-medium text-sm sm:text-base">
           Edit Profile
         </button>
         <button className="pb-2 px-4 text-textBlueLight hover:text-textBlueDark text-sm sm:text-base">
@@ -144,10 +144,10 @@ const Settings = () => {
       </form>
 
       {/* Save Button */}
-      <div className="mt-6 flex justify-end">
+      <div className="mt-6 flex justify-end sm:justify-end">
         <button
           type="submit"
-          className="px-6 py-3 bg-darkText text-white rounded-lg font-medium hover:bg-gray-800 transition"
+          className="w-full sm:w-auto px-6 py-3 bg-darkText text-white rounded-lg font-medium hover:bg-gray-800 transition"
           onClick={handleSubmit}
         >
           Save

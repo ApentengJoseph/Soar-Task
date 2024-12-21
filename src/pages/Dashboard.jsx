@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
-import { useData } from "./DataContext";
+import { useData } from "../contexts/DataContext";
 import Card from "../components/Card";
 import TransactionList from "../components/TransactionList";
 import WeeklyActivity from "../components/WeeklyActivity";
 import ExpenseStatistics from "../components/ExpenseStatistics";
 import QuickTransfer from "../components/QuickTransfer";
 import BalanceHistory from "../components/BalanceHistory";
+import Shimmer from "../components/Shimmer";
 
 const Dashboard = () => {
   const {
@@ -18,6 +19,10 @@ const Dashboard = () => {
   } = useData(); // Access data from context
 
   const scrollContainerRef = useRef(null);
+
+  if (!transactions.length || !cards.length || !expenseData.labels.length) {
+    return <Shimmer />; // Show shimmer while loading
+  }
 
   const handleScroll = (event) => {
     const scrollLeft = event.target.scrollLeft;

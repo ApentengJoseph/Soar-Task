@@ -1,10 +1,17 @@
 import "@fontsource/inter";
 import "./App.css";
 import Layout from "./components/Layout";
-import { ProfileProvider } from "./pages/ProfileContext";
-import { DataProvider } from "./pages/DataContext"; 
+import { ProfileProvider } from "./contexts/ProfileContext";
+import { DataProvider } from "./contexts/DataContext"; 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { Suspense, lazy } from "react";
+
+// Spinner Component
+const Spinner = () => (
+  <div className="spinner-container">
+    <div className="spinner"></div>
+  </div>
+);
 
 // Lazy load pages
 const Dashboard = lazy(() => import("./pages/Dashboard"));
@@ -15,7 +22,7 @@ function App() {
     <ProfileProvider>
       <DataProvider>
         <Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Spinner />}>
             <Routes>
               <Route path="/" element={<Layout />}>
                 <Route index element={<Dashboard />} />
